@@ -1,0 +1,12 @@
+services:
+  dev:
+    build:
+      dockerfile: Dockerfile
+    image: ghcr.io/yingchaoorg/local_docs-amis-doc:mastrt
+    privileged: false
+    container_name: local-docs-amis-docs
+    volumes:
+      - .:/home/node/www
+    tty: true
+    ports:
+      - 34812:80
