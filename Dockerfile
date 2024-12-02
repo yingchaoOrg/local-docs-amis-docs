@@ -8,7 +8,6 @@ COPY . /home/node/www
 RUN npm i --legacy-peer-deps
 
 EXPOSE 8888
-
 CMD npm start
 
 
