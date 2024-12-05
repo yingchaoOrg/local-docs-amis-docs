@@ -13,7 +13,7 @@ COPY . /home/node/www
 WORKDIR /home/node/www/packages/office-viewer
 RUN npm i --legacy-peer-deps
 WORKDIR /home/node/www
-RUN run build --workspaces
+RUN npm run build --workspaces
 RUN ./deploy-gh-pages.sh
 EXPOSE 80
 CMD http-server ./gh-pages -p 80 -a 0.0.0.0
